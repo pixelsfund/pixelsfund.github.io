@@ -8,8 +8,7 @@
         <link rel="icon" href="https://pixels.camp/img/icons/favicon-32x32.png">
         <title>Pixels Fund</title>
         <!-- Bootstrap core CSS -->
-        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
         <!-- Custom styles for this template -->
         <link href="assets/css/demo.css" rel="stylesheet">
   </head>
@@ -77,10 +76,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
-        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
         <script type="text/javascript">
             function copyToClipBoard(txt) {
@@ -102,6 +99,23 @@
 
 
             copyToClipBoard('thisisouraddress');
+
+            // IE10 viewport hack for Surface/desktop Windows 8 bug
+            // http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js
+                (function () {
+                  'use strict'
+
+                  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                    var msViewportStyle = document.createElement('style')
+                    msViewportStyle.appendChild(
+                      document.createTextNode(
+                        '@-ms-viewport{width:auto!important}'
+                      )
+                    )
+                    document.head.appendChild(msViewportStyle)
+                  }
+
+                }())
         </script>
     <!-- JAVASCRIPT -->
   </body>
