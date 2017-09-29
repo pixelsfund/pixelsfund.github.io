@@ -9,6 +9,8 @@
         <title>Pixels Fund</title>
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="assets/css/demo.css" rel="stylesheet">
   </head>
@@ -37,7 +39,7 @@
         </div>
     <!--Video Section Ends Here-->
     <!--Content Section-->
-        <div class="container" id="info" style="margin-bottom: 200px;">
+        <div class="container" id="info">
             <h3>How does it work?</h3>
                 <ul>
                     <li>Savvy investors choose Pixels Fund to manage their EXP endowment.</li>
@@ -46,7 +48,7 @@
                     <li>After the funds are distributed, Pixels Fund will distribute earnings out to our investors.</li>
                     <li>Party</li>
                 </ul>
-            <div class="d-none"> <!-- ************ GUILHERME!!!! REMOVE D-NONE!!!! ******** -->
+            <div>
                 <h3>How do I invest?</h3>
                     <ol>
                         <li><a href="https://wallet.pixels.camp/#send-transaction" target="_blank">Go to your wallet!</a></li>
@@ -56,6 +58,8 @@
                         <li>Enter the Amount</li>
                         <li>Enter Gas Limit</li>
                         <li>Click Generate Transaction</li>
+                        <li>Scroll down</li>
+                        <li>Click Send Transaction</li>
                     </ol>
             </div>
         </div>
@@ -94,11 +98,11 @@
             }
 
             $('#address').on('click', function (e) {
-                copyToClipBoard('thisisouraddress');
+                copyToClipBoard('0x79238673af325254bfe4487814caf235b3513bb8');
             });
 
 
-            copyToClipBoard('thisisouraddress');
+            copyToClipBoard('0x79238673af325254bfe4487814caf235b3513bb8');
 
             // IE10 viewport hack for Surface/desktop Windows 8 bug
             // http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js

@@ -53,3 +53,38 @@
         background-color: #000 !important;
     }
 /*VIDEO*/
+/*INVESTMENTS*/
+  img {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    object-fit: fill;
+    width: 100%;
+  }
+  img:hover {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  .title {
+    font-family: 'VT323', monospace;
+    font-size: calc(20px + 1.5vw);
+  }
+  .image {
+    height: 200px;
+    overflow: hidden;
+  }
+  .place {
+    background-color: #fdcf1a;
+    z-index: 999;
+    color: black;
+    position: relative;
+    width: 30px;
+  }
+
+
+
+/*INVESTMENTS*/
