@@ -56,7 +56,7 @@
                         <li><a href="https://wallet.pixels.camp/#send-transaction" target="_blank">Go to your wallet</a></li>
                         <li>Enter your Private Key</li>
                         <li>Click Unlock</li>
-                        <li><span class="js-test-textarea" id="address">Click here to copy our address</span></li>
+                        <li><a class="test" id="address" data-clipboard-text="0x51bdb634ab627f79cc0166cc0bab0cd29f6d8294">Click here to copy our address</a></li>
                         <li>Enter the Amount</li>
                         <li>Enter Gas Limit</li>
                         <li>Click Generate Transaction</li>
@@ -97,26 +97,32 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+    <!-- JAVASCRIPT -->
         <script type="text/javascript">
-            function copyToClipBoard(txt) {
-                try {
-                    var $temp = $("<input>");
-                    $("body").append($temp);
-                    $temp.val(txt).select();
-                    var retVal = document.execCommand("copy");
-                    console.log('Copy to clipboard returns: ' + retVal);
-                    $temp.remove();
-                } catch (err) {
-                    console.log('Error while copying to clipboard: ' + err);
-                }
-            }
-
-            $('#address').on('click', function (e) {
-                copyToClipBoard('0x51bdb634ab627f79cc0166cc0bab0cd29f6d8294');
+            $('.test').tooltip({
+              trigger: 'click',
+              placement: 'bottom'
             });
 
+            function setTooltip(btn, message) {
+              btn.tooltip('hide')
+                .attr('data-original-title', message)
+                .tooltip('show');
+            }
 
-            copyToClipBoard('0x51bdb634ab627f79cc0166cc0bab0cd29f6d8294');
+            function hideTooltip(btn) {
+              setTimeout(function() {
+                btn.tooltip('hide');
+              }, 1000);
+            }
+
+            var clipboard = new Clipboard('.test');
+
+            clipboard.on('success', function(e) {
+                var btn = $(e.trigger);
+              setTooltip(btn, 'Copied');
+              hideTooltip(btn);
+            });
 
             // IE10 viewport hack for Surface/desktop Windows 8 bug
             // http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js
